@@ -297,7 +297,7 @@ input, select{
 
 .cajaGrilla h3 {
     filter: var(--drop-shadow-grilla);
-    font-size: calc(var(--font-chico) + 0.5rem);
+    font-size: (var(--font-chico));
 }
 
 .cajaGrilla input {
