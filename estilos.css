@@ -13,11 +13,13 @@
     --drop-shadow-main: drop-shadow(0px 1px 10px #2b2b2b60);
     --drop-shadow-grilla: drop-shadow(5px 2px 7px #000000);
     --transition-hover: 0.3s ease;
-    --font-grilla: 2.7rem;
+    --font-chico: 1rem;
+    --font-medio: 2rem;
+    --font-grande: 3rem;
+    --padding-medio: 2vw;
 }
 html {
     font-size: 16px;
-    overflow-x: hidden;
 }
 body {
     display: flex;
@@ -39,20 +41,20 @@ body {
 h1 {
   font-family: "Jockey One", sans-serif;
   color: var(--blanco);
-  font-size: 3rem;
+  font-size: var(--font-grande);
 }
 
 h2 {
       font-family: "Jockey One", sans-serif;
         color: var(--negro);
-        font-size: 2rem;
+        font-size: var(--font-medio);
 }
 
 h3 {
     font-family: "Magra", sans-serif;
     font-weight: 700;
     color: var(--blanco);
-    font-size: 3rem;
+    font-size: var(--font-grande);
 }
 
 a {
@@ -68,11 +70,11 @@ p {
 }
 
 h4, a {
-    font-family: "Margarine", sans-serif;
+font-family: "Margarine", sans-serif;
   font-weight: 400;
   font-style: normal;
   color: var(--negro);
-  font-size: 0.8rem;
+  font-size: calc(var(--font-chico) - 0.2rem);
 }
 
 /* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
@@ -90,7 +92,7 @@ button {
     border: none;
     padding: 1vh 5vw;
     font-family: "Margarine", sans-serif;
-    font-size: 1rem;
+    font-size: var(--font-chico);
     max-width: 90%;
 }
 
@@ -124,7 +126,7 @@ header div h3 {
 }
 
 header h3 {
-    font-size: 2rem;
+    font-size: var(--font-medio);
     color: var(--negro);
     display: none;
 }
@@ -153,7 +155,7 @@ header img {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 2vw;
+    padding: var(--padding-medio);
     width: 100%;
 }
  /* Textos de HERO */
@@ -166,7 +168,7 @@ header img {
 
 h1 em {
     color: var(--naranja);
-    font-size: 3.2rem;
+    font-size: calc(var(--font-grande) + 0.7rem);
 }
 
 
@@ -246,13 +248,26 @@ input, select{
     display: none;
 }
 
+.gapFlexHerramientas {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
 /* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 /* DESCRIPTORES DE SECCION */
 .descriptorDeSeccion {
     align-self: center;
     width: 80vw;
-    margin-top: 2vh;
+    margin: 2vh 0vh;
+}
+
+.descriptorDeSeccion h2{
+    font-size: var(--font-medio);
+}
+.descriptorDeSeccion h4{
+    font-size: var(--font-chico);
 }
 
 /* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
@@ -282,7 +297,7 @@ input, select{
 
 .cajaGrilla h3 {
     filter: var(--drop-shadow-grilla);
-    font-size: 1.5rem;
+    font-size: calc(var(--font-chico) + 0.5rem);
 }
 
 .cajaGrilla input {
@@ -328,12 +343,12 @@ input, select{
 /* Estilos de textos dentro de las secciones que no tienen imagenes */
 
 .grillaMain > :nth-child(2) h2 {
-    font-size: 2.5rem;
+    font-size: calc(var(--font-grande) - 0.5rem);
     color: var(--color-secundario);
     filter: none;
 }
 .grillaMain > :nth-child(4) h2 {
-    font-size: var(--font-grilla);
+    font-size: calc(var(--font-grande) - 0.3rem);
     margin-bottom: 10px;
     filter: none;
 }
@@ -380,7 +395,7 @@ input, select{
     border: 2px solid;
     border-color: var(--color-principal);
     border-radius: 15px;
-    padding: 2vw;
+    padding: var(--padding-medio);
     gap: 1vh;
     align-items: center;
 }
@@ -404,7 +419,7 @@ input, select{
 
 footer {
     width: 100%;
-    height: 20vh;
+    height: 40vh;
     background-color: var(--color-principal);
     display: flex;
     justify-content: space-between;
@@ -422,6 +437,44 @@ footer div img {
     height: 6vw;
     cursor: pointer;
 }
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* BUSCADOR CON POSITION FIXED */
+
+.IAMobile {
+    position: fixed;
+    bottom: 5%;
+    left: 80%;
+    filter: var(--drop-shadow-grilla);
+}
+
+.IAMobile img {
+    width: 15vw;
+    height: 15vw;
+}
+
+.botonIA {
+    cursor: pointer;
+}
+
+.botonIA:hover {
+    animation-name: rotacionColor;
+  animation-duration: 1s;
+}
+
+.IADesktop {
+    display: none;
+}
+
+/* Use animaciones, para una boludez, lo saque de W3SCHOOLS */
+@keyframes rotacionColor {
+  0%   {filter: hue-rotate(90deg);}
+  25%  {filter: hue-rotate(180deg);}
+  50%  {filter: hue-rotate(270deg);}
+  100% {filter: hue-rotate(360deg);}
+}
+
 
 
 /* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
@@ -465,10 +518,10 @@ button {
 
 /* Menus que describen secciones */
 .descriptorDeSeccion h2{
-    font-size: 3rem;
+    font-size: var(--font-grande);
 }
 .descriptorDeSeccion h4{
-    font-size: 1rem;
+    font-size: var(--font-chico);
 }
 
 
@@ -547,6 +600,18 @@ footer div img {
     height: 4vw;
 }
 
+
+.IAMobile img {
+    width: 10vw;
+    height: 10vw;
+}
+
+.IAMobile {
+    position: fixed;
+    bottom: 3%;
+    left: 85%;
+    filter: var(--drop-shadow-grilla);
+}
 }
 
 
@@ -600,9 +665,9 @@ footer div img {
 /* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 /* INICIAR SESION */
 
-/* La posicion se vuelve relativa, lo subimos y lo movemos para que ocupe parte del HERO. Cambian los botones de lugar */
+/* La posicion del iniciar sesion se vuelve relativa, lo subimos y lo movemos para que ocupe parte del HERO. Cambian los botones de lugar */
     .ContenedorIniciarSesion {
-    padding: 2vw;
+    padding: var(--padding-medio);
     width: 35vw;
     position: relative;
     bottom: 50vh;
@@ -611,16 +676,16 @@ footer div img {
     }
 
     .ContenedorIniciarSesion h2{
-    font-size: 2rem;
+    font-size: var(--font-medio);
     }
 
     .ContenedorIniciarSesion h4{
-    font-size: 1rem;
+    font-size: var(--font-chico);
     }
 
     input, select{
     height: auto;
-    font-size: 1.2rem;
+    font-size: calc(var(--font-chico) + 0.2rem);
     padding: 0vh 1vw;
      }  
 
@@ -671,22 +736,22 @@ filter: grayscale(50%);
 /* Los estilos de texto cambian un poco, se agregan hovers */
 
 .cajaGrilla h2 {
-    font-size: var(--font-grilla);
+    font-size: calc(var(--font-grande) - 0.3rem);
     transition: var(--transition-hover);
 }
 .cajaGrilla > h3 {
-    font-size: 1rem;
+    font-size: var(--font-chico);
     opacity: 0%;
     position: relative;
     right: 20vw;
     transition: 0.3s ease;
 }
 .grillaMain > :nth-child(4) h2 {
-        font-size: 2rem;
+        font-size: var(--font-medio);
 }
 
 .cajaGrilla:hover h2 {
-    font-size: 2.5rem;
+    font-size: calc(var(--font-grande) - 0.5rem);
 }
 .cajaGrilla:hover > h3 {
     opacity: 100%;
@@ -702,7 +767,7 @@ filter: grayscale(50%);
 }
 
 .grillaMain > :nth-child(2) h2:hover {
-font-size: 2.5rem;
+font-size: calc(var(--font-grande) - 0.5rem);
   color: #fff;
   box-shadow: inset 400px 0 0 0 var(--color-marron); }
 
@@ -733,7 +798,7 @@ font-size: 2.5rem;
     .itemImagenLibreria .botonChico {
         width: auto;
         padding: 1vw 3vw;
-        font-size: 1rem;
+        font-size: var(--font-chico);
     } 
 
 /* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
@@ -742,6 +807,32 @@ font-size: 2.5rem;
 footer div img {
     width: 3vw;
     height: 3vw;
+}
+
+/* Position Fixed */
+
+.IADesktop {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    justify-content: flex-end;
+    bottom: 3%;
+    left: 65%;
+    filter: var(--drop-shadow-main);
+}
+.IADesktop img {
+    width: 4vw;
+    height: 4vw;
+    position: relative;
+    right: 10%;
+}
+.IADesktop input {
+    font-size: var(--font-chico);
+    width: 30vw;
+    border: var(--color-principal) 2px solid;
+}
+.IAMobile {
+    display: none;
 }
 
      
