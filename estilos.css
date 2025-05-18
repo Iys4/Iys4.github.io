@@ -1,0 +1,750 @@
+@import url('https://fonts.googleapis.com/css2?family=Jockey+One&family=Magra:wght@400;700&family=Margarine&display=swap');
+:root {
+    --color-principal: #81B8BC;
+    --color-secundario:#19535F;
+    --hover-color: #216d7c;
+    --pressed-color:#14434d;
+    --hover-color-trans:#8dcbcf;
+    --active-color-trans:#6fa0a3;
+    --color-marron: #61391D;
+    --blanco: #f4f4f4;
+    --negro: #010101;
+    --naranja: #FD6E0A;
+    --drop-shadow-main: drop-shadow(0px 1px 10px #2b2b2b60);
+    --drop-shadow-grilla: drop-shadow(5px 2px 7px #000000);
+    --transition-hover: 0.3s ease;
+    --font-grilla: 2.7rem;
+}
+html {
+    font-size: 16px;
+    overflow-x: hidden;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--blanco);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* Estilos generales para textos */
+
+h1 {
+  font-family: "Jockey One", sans-serif;
+  color: var(--blanco);
+  font-size: 3rem;
+}
+
+h2 {
+      font-family: "Jockey One", sans-serif;
+        color: var(--negro);
+        font-size: 2rem;
+}
+
+h3 {
+    font-family: "Magra", sans-serif;
+    font-weight: 700;
+    color: var(--blanco);
+    font-size: 3rem;
+}
+
+a {
+    text-decoration: underline;
+        cursor: pointer;
+}
+
+p {
+  font-family: "Magra", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--negro);
+}
+
+h4, a {
+    font-family: "Margarine", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--negro);
+  font-size: 0.8rem;
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* Estilos generales para botones */
+
+button {
+    cursor: pointer;
+    transition: var(--transition-hover);
+    border-radius: 50px;
+    background-color: var(--color-secundario);
+    color: var(--blanco);
+    font-weight: 300;
+    border: none;
+    padding: 1vh 5vw;
+    font-family: "Margarine", sans-serif;
+    font-size: 1rem;
+    max-width: 90%;
+}
+
+    button:hover {
+        background-color: var(--hover-color);
+    }
+    button:active {
+        background-color: var(--pressed-color);
+    }
+
+.botonMedio {
+    text-align: center;
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* Estilos de Header */
+
+header {
+    display: flex;
+    background-color: transparent;
+    height: 10vh;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+header div h3 {
+    cursor: pointer;
+    transition: var(--transition-hover);
+}
+
+header h3 {
+    font-size: 2rem;
+    color: var(--negro);
+    display: none;
+}
+.menuHamburguesa img {
+    width: 5vw;
+    height: 5vw;
+    margin: 5vw;
+}
+header img {
+    width: 40vw;
+}
+
+
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* HERO SECTION */
+
+.bannerSeccion {
+    background-image: url(img/Frame\ 23.svg);
+    height: 60vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2vw;
+    width: 100%;
+}
+ /* Textos de HERO */
+.bannerSeccion h1 {
+    color: var(--negro);
+    text-align: center;
+    line-height: 100%;
+     font-family: "Jockey One", sans-serif;
+}
+
+h1 em {
+    color: var(--naranja);
+    font-size: 3.2rem;
+}
+
+
+/* Aca se definen los estilos de los botones que van en el HERO section */
+
+.contenedorBotonesBanner {
+    flex-direction: column;
+    display: flex;
+    gap: 3vw;
+    width: 80%;
+    margin-top: 2vh;
+}
+
+.contenedorBotonesBanner button {
+        color: var(--negro);
+        background-color: var(--blanco);
+        border: #81B8BC 2px solid;
+        filter: var(--drop-shadow-main);
+}
+
+.contenedorBotonesBanner button:hover{
+    background-color: var(--color-principal);
+}
+.contenedorBotonesBanner button:active{
+    background-color: var(--active-color-trans);
+    border: var(--active-color-trans) 2px solid;
+}
+
+.contenedorBotonesBanner :nth-child(1){
+    background-color: var(--color-principal);
+}
+
+.contenedorBotonesBanner :nth-child(1):hover{
+    background-color: var(--hover-color-trans);
+            border: var(--hover-color-trans) 2px solid;
+}
+
+.contenedorBotonesBanner :nth-child(1):active{
+    background-color: var(--active-color-trans);
+            border: var(--active-color-trans) 2px solid;
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* Seccion Iniciar Sesion */
+
+.ContenedorIniciarSesion {
+    gap: 1vw;
+    filter: var(--drop-shadow-main);
+    background-color: var(--color-principal);
+    border-radius: 40px;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 5vw;
+    align-self: center;
+    margin: 2vh 0;
+}
+
+/* Estilos del input y el select para mobile */
+input, select{
+        border-radius: 3px;
+        border: 1px solid var(--negro);
+        font-family: "Margarine", sans-serif;
+        height: 4vh;
+        padding: 0px 1vw;
+}
+
+/* Estos selectores esconden unos input para celular y otros para tablet */
+.celular {
+    display: block;
+}
+
+.tablet {
+    display: none;
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* DESCRIPTORES DE SECCION */
+.descriptorDeSeccion {
+    align-self: center;
+    width: 80vw;
+    margin-top: 2vh;
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ESTILOS DE GRILLA */
+
+.grillaMain {
+    display: grid;
+    width: 100%;
+    margin-top: 2vh;
+    grid-template-columns: minmax(100%, 100%);
+}
+
+.cajaGrilla {
+    padding: 10% 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cajaGrilla h2 {
+    color: var(--blanco);
+    filter: var(--drop-shadow-grilla);
+    line-height: 0.9;
+}
+
+.cajaGrilla h3 {
+    filter: var(--drop-shadow-grilla);
+    font-size: 1.5rem;
+}
+
+.cajaGrilla input {
+    margin-bottom: 10px;
+}
+
+.tituloGrillaMobile {
+    display: flex;
+    gap: 3vw;
+    align-items: center;
+}
+
+/* Declaracion de imagenes en las secciones especificas */
+
+.grillaMain > :nth-child(1) {
+    background-image: url(img/AliciaEnElPais.jpg);
+    background-size: cover;
+}
+.grillaMain > :nth-child(2) {
+    background-color: var(--color-principal);
+    display: none;
+}
+
+.grillaMain > :nth-child(3) {
+    background-image: url(img/LittleWomen.jpg);
+        background-size: cover;
+}
+
+.grillaMain > :nth-child(4) {
+    background-color: var(--color-marron);
+}
+
+.grillaMain > :nth-child(5) {
+    background-image: url(img/aTaleOfTwoCities.jpg);
+        background-size: cover;
+}
+
+.grillaMain > :nth-child(6) {
+    background-image: url(img/Beowulf.jpg);
+    background-size: cover;
+}
+
+/* Estilos de textos dentro de las secciones que no tienen imagenes */
+
+.grillaMain > :nth-child(2) h2 {
+    font-size: 2.5rem;
+    color: var(--color-secundario);
+    filter: none;
+}
+.grillaMain > :nth-child(4) h2 {
+    font-size: var(--font-grilla);
+    margin-bottom: 10px;
+    filter: none;
+}
+
+/* Boton que esta al lado derecho del titulo en las versiones mobile y Tablet */
+
+.cajaGrilla img{
+    display: block;
+    position: relative;
+    left: 0vw;
+    opacity: 100%;
+    transition: var(--transition-hover);
+    filter: var(--drop-shadow-grilla) hue-rotate(0deg);
+}
+
+.cajaGrilla:active img {
+    opacity: 0%;
+    position: relative;
+    left: 20vw;
+    filter: hue-rotate(100deg);
+}
+
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* SECCION DE HERRAMIENTAS */
+
+
+.seccionHerramientas {
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        gap: 5vw;
+        margin-bottom: 5vw;
+}
+
+/* Se describe la caja donde van a estar las herramientas educativas */
+
+.itemImagenLibreria {
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid;
+    border-color: var(--color-principal);
+    border-radius: 15px;
+    padding: 2vw;
+    gap: 1vh;
+    align-items: center;
+}
+
+.itemImagenLibreria img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+/* SE BORRA LA IMAGEN DE LA 4 Y LA 5 */
+.seccionHerramientas > :nth-child(n+4) img {
+    display: none;
+}
+
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* FOOTER */
+
+footer {
+    width: 100%;
+    height: 20vh;
+    background-color: var(--color-principal);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5vw;
+}
+
+footer div {
+    display: flex;
+    gap: 2vw;
+}
+
+footer div img {
+    width: 6vw;
+    height: 6vw;
+    cursor: pointer;
+}
+
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* TABLET */
+
+@media all and (min-width: 768px) { 
+    html {
+    font-size: 18px;
+    }
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* HEADER */
+/* Header, cambia el tamaño del logo, se va el menu hamburguesa */
+
+header img {
+width: 30vw;
+}
+header > :nth-child(2) {
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+}
+    header h3 {
+        display: block;
+    }
+    header .menuHamburguesa {
+        display: none;
+    }
+
+/* Cambio el padding de los botones un poco */
+button {
+    padding: 1vh 5vw;
+}
+.botonChico {
+    padding: 2vw 0;
+}
+
+/* Menus que describen secciones */
+.descriptorDeSeccion h2{
+    font-size: 3rem;
+}
+.descriptorDeSeccion h4{
+    font-size: 1rem;
+}
+
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* Iniciar Sesion */
+
+
+/* Cambiamos los select e inputs a uno especial de la tablet. */
+select, .tablet  {
+    width: 90%;
+}
+
+.tablet input {
+    width: 49%;
+}
+
+.celular {
+    display: none;
+}
+
+.tablet {
+    display: block;
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* GRILLA */
+
+/* Se definen los nuevos anchos de las cajas de la grilla que miden mas que 1. */
+    .grillaMain > :nth-child(2) {
+        display: block;
+                grid-row: 1 /3;
+}
+    .grillaMain > :nth-child(4) {
+                grid-column: 1 / 3;
+}
+    .grillaMain {
+        grid-template-columns: repeat(2,1fr);
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* MENU DE HERRAMIENTAS */
+
+.seccionHerramientas {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2vh;
+    padding: 5vh 0;
+}
+
+.itemImagenLibreria {
+    display: flex;
+    width: 40vw;
+    height: auto;
+    margin: 0;
+}
+.itemImagenLibreria .botonChico {
+    padding: 1vw 1vw;
+    width: 20vw;
+}
+ .seccionHerramientas > :nth-child(n+4) {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* FOOTER */
+footer div img {
+    width: 4vw;
+    height: 4vw;
+}
+
+}
+
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ESCRITORIO */
+
+@media all and (min-width: 1040px) {
+
+    html {
+    font-size: 23px;
+    }
+    .botonChico {
+    padding: 0.7vw 0;
+    }
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* HEADER */
+    header {
+        height: 10vh;
+    }
+    header div h3:hover {
+    color: var(--color-principal);
+    }
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* HERO */
+
+/* Cambiamos la imagen del HERO */
+
+        .bannerSeccion {
+        height: 100vh;
+        background-image: url(img/Frame\ 24.svg);
+    }
+
+    /* Los botones del hero estan diferentes al de mobile */
+
+        .contenedorBotonesBanner{
+            width: 40vw;
+            align-self: flex-start;
+            margin-top: 30vh;
+            margin-left: 10vw;
+        }
+            .contenedorBotonesBanner button {
+                padding: 2vh;
+            }
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* INICIAR SESION */
+
+/* La posicion se vuelve relativa, lo subimos y lo movemos para que ocupe parte del HERO. Cambian los botones de lugar */
+    .ContenedorIniciarSesion {
+    padding: 2vw;
+    width: 35vw;
+    position: relative;
+    bottom: 50vh;
+    margin-bottom: -50vh;
+    left: 25vw;
+    }
+
+    .ContenedorIniciarSesion h2{
+    font-size: 2rem;
+    }
+
+    .ContenedorIniciarSesion h4{
+    font-size: 1rem;
+    }
+
+    input, select{
+    height: auto;
+    font-size: 1.2rem;
+    padding: 0vh 1vw;
+     }  
+
+     /* Uso el mismo tipo de selects e inputs que en la version mobile */
+    .celular {
+    display: block;
+    }
+
+    .tablet {
+    display: none;
+    width: auto;
+    }
+    select  {
+    width: auto;
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* GRILLA */
+
+/* Cambian las relaciones de los cuadrados de nuevo */
+.grillaMain {
+grid-template-columns: repeat(4,1fr);
+grid-auto-columns: minmax(20%, 20%);
+}
+
+.cajaGrilla {
+cursor: pointer;
+transition: 0.3s ease;
+filter: grayscale(50%);
+}
+
+.cajaGrilla:hover {
+    filter: grayscale(0%);
+}
+
+    .grillaMain > :nth-child(2) {
+        display: flex;
+        justify-content: center;
+                grid-row: 1 /3;
+                grid-column: 4;
+}
+    .grillaMain > :nth-child(4) {
+                grid-row: 2;
+                grid-column: 2 / 4;
+}
+
+/* Los estilos de texto cambian un poco, se agregan hovers */
+
+.cajaGrilla h2 {
+    font-size: var(--font-grilla);
+    transition: var(--transition-hover);
+}
+.cajaGrilla > h3 {
+    font-size: 1rem;
+    opacity: 0%;
+    position: relative;
+    right: 20vw;
+    transition: 0.3s ease;
+}
+.grillaMain > :nth-child(4) h2 {
+        font-size: 2rem;
+}
+
+.cajaGrilla:hover h2 {
+    font-size: 2.5rem;
+}
+.cajaGrilla:hover > h3 {
+    opacity: 100%;
+    right: 0vw;
+}
+
+.cajaGrilla h3 {
+        pointer-events: none;
+}
+
+.grillaMain > :nth-child(2) h2 {
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+.grillaMain > :nth-child(2) h2:hover {
+font-size: 2.5rem;
+  color: #fff;
+  box-shadow: inset 400px 0 0 0 var(--color-marron); }
+
+/* Se borra el boton que usaba para las versiones tactiles */
+.cajaGrilla img{
+    display: none;
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* HERRAMIENTAS */
+
+.itemImagenLibreria {
+    width: 30vw;
+    justify-content: space-around;
+}
+
+/* Aparecen las imagenes de los ultimos dos articulos */
+ .seccionHerramientas > :nth-child(n+4) {
+    display: flex;
+    flex-direction: row;
+    gap: 1vh;
+}
+
+.seccionHerramientas > :nth-child(n+4) img {
+    display: block;
+}
+    .itemImagenLibreria .botonChico {
+        width: auto;
+        padding: 1vw 3vw;
+        font-size: 1rem;
+    } 
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* FOOTER */
+footer div img {
+    width: 3vw;
+    height: 3vw;
+}
+
+     
+
+    }
+    
