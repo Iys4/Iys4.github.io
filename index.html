@@ -11,8 +11,8 @@
     <header>
         <img src="img/LOGO.svg" alt="">
         <div>
-        <h3>Libros</h3>
-        <h3>Herramientas</h3>
+        <a href="#grillaID"><h3>Libros</h3></a>
+        <a href="#herramientasID"><h3>Herramientas</h3></a>
         <h3>Blog</h3>
         </div>
         <div class="menuHamburguesa">
@@ -48,7 +48,7 @@
         <h2>Catalogo</h2>
         <h4>Nuestro catalogo esta lleno de libros gratis para enriquecer tu aprendizaje de Ingles.</h4>
         </div>
-    <main class="grillaMain">
+    <main class="grillaMain" id="grillaID">
         <div class="cajaGrilla">
             <div class="tituloGrillaMobile">
             <h2>Infantiles</h2>
@@ -68,7 +68,11 @@
         </div>
         <div class="cajaGrilla">
             <h2>Descubre tu proxima lectura con nuestro buscador inteligente</h2>
-            <input type="text">
+            <div class="buscadorGrilla">           
+                <input type="text">
+                <img src="img/Icono_Buscador.svg" alt="IconoBuscador" class="botonIA">
+            </div>
+
         </div>
             <div class="cajaGrilla">
             <div class="tituloGrillaMobile">
@@ -90,7 +94,7 @@
         <h4>Herramientas útiles para mejorar tu aprendizaje</h4>
     </div>
 
-    <div class="seccionHerramientas">
+    <div class="seccionHerramientas" id="herramientasID">
         <div class="itemImagenLibreria">
             <img src="img/LibreriasRecomendadas.svg" alt="Imagen de hombre mirando librerías">
             <h2>Librerías Recomendadas</h2>
@@ -123,24 +127,22 @@
             <button class="botonChico">Ingresar</button>
         </div>
     </div>
-
     </div>
 
     <footer>
         <h2>Nuestras Redes</h2>
         <div>
         <img src="img/linkedin-logo.png" alt="">
-        <img src="img/whatsapp (2).png" alt="">
-        <img src="img/instagram (4).png" alt="">
+        <img src="img/whatsapp_(2).png" alt="">
+        <img src="img/instagram_(4).png" alt="">
         </div>
     </footer>
     <div class="IAMobile">
-        <img src="img/Icono Buscador.svg" alt="Imagen del Buscador IA" class="botonIA">
+        <img src="img/Icono_Buscador.svg" alt="Imagen del Buscador IA" class="botonIA">
     </div>
     <div class="IADesktop">
         <input type="text" placeholder="Escribe el libro que buscas">
-        <img src="img/Icono Buscador.svg" alt="Imagen del Buscador IA" class="botonIA">
+        <img src="img/Icono_Buscador.svg" alt="Imagen del Buscador IA" class="botonIA">
     </div>
-    
 </body>
 </html>
